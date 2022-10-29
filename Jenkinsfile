@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Successful Build for Maven Web App'
+                withMaven(maven : 'apache-maven-3.6.1') {
+                bat'mvn clean compile'
             }
         }
     }
