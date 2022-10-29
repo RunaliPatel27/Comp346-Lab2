@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install'
+                echo 'Successful Build for Maven Web App'
             }
         }
     }
